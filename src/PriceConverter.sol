@@ -9,7 +9,7 @@ library PriceConverter {
     ) internal view returns (uint256) {
         (, int256 answer, , , ) = priceFeed.latestRoundData();
         // ETH/USD rate in 18 digit
-        return uint256(answer * 10000000000);
+        return uint256(answer * 10_000_000_000);
     }
 
     function getConversionRate(
